@@ -2,6 +2,21 @@
   <div id="app">
    <div class="container">
       <h1>VueJS Currency Exchange App</h1>
+      <div class="rate-block">
+      <div class="actual-rate">
+        {{data[0].ccy}}
+      <div class="actual-rate-item">
+          buy:{{data[0].buy}}     sale:{{data[0].sale}}
+        </div>
+        </div>
+      <div class="actual-rate">
+        {{data[1].ccy}}
+      <div class="actual-rate-item">
+          buy:{{data[1].buy}}     sale:{{data[1].sale}}
+        </div>
+
+      </div>
+      </div>
       <div class="main">
       <div class="container-first">
         <div class="first-block">
@@ -191,5 +206,17 @@ export default {
   }
   .image img{
     height: 6vw;
+  }
+  .rate-block{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 2vw;
+  }
+  .actual-rate{
+    font-size: 2vw;
+  }
+  .actual-rate-item{
+    display: table-caption;
   }
 </style>
